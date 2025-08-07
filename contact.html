@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+
+
+  <!-- Latest EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("IU5QKtHiJKO3iMx9F");
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="./index.html" class="logo">
+        <img src="./images/Bharatlogo.webp" alt="Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./service.html">Services</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./contact.html" class="btn btn-outline">Join Us</a></li>
+      </ul>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <!-- Left Info -->
+      <div class="contact-info">
+        <h2>Get In Touch With Us</h2>
+        <p>We collaborate with industry leaders to deliver top-notch services
+          and innovative solutions.</p>
+
+        <div class="info-block">
+          <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h3>Our Location</h3>
+            <p>Office No-2505B, Floor-25th, The Iconic Corenthum,<br>Sector
+              62, Noida, Uttar Pradesh 201301</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
+          <div>
+            <h3>Phone Numbers</h3>
+            <p>+91 9667552361<br>+91 9405319531</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h3>Email Address</h3>
+            <p>info@bharatdigital.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Contact Form -->
+      <div class="contact-form">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <input type="text" id="phone" placeholder="Your Phone" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe title="office-map"
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.928003530495!2d79.06327597528066!3d21.115252980534938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c079fffffff1%3A0xe16540b0c6a6fd9!2sWHC%20Road%2C%20Dharampeth%2C%20Nagpur%2C%20Maharashtra%20440010!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin"
+        width="100%" height="400" style="border:0;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div class="elfsight-app-ea1918b9-b849-44d1-bc99-027d5bd1f48a" data-elfsight-app-lazy></div>
+  </section>
+
+  <div class="footer-hero-section">
+    <div class="footer-hero-content">
+      <h1>Need IT Solutions?<br><span>Let’s <em>start now.</em></span></h1>
+      <a href="tel:9667552361">
+        <button class="cta-button">
+          <i class="fa-solid fa-phone-volume"></i> Call Us
+        </button>
+      </a>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Company Info -->
+            <div class="footer-col footer-about">
+              <div class="footer-logo">
+                <img src="./images/Bharatlogo.webp" alt="Bharat Digital Logo" class="logo-img">
+              </div>
+              <p class="footer-description">
+                Empowering businesses with innovative digital solutions since 2010. We help companies
+                transform through cutting-edge technology.
+              </p>
+              <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/bharatdigitals" aria-label="Facebook"><i
+                      class="fab fa-facebook-f"></i></a>
+                  <a href="https://api.whatsapp.com/send/?phone=%2B919667552361&text=ds&type=phone_number&app_absent=0"
+                    aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/bharatdigital-services" aria-label="LinkedIn"
+                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.instagram.com/bharatdigital.co/?hl=en" aria-label="Instagram" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+              <h3 class="footer-title">Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="./index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="./service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <li><a href="./about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                <li><a href="./contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                <li><a href="./blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+              </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+              <h3 class="footer-title">Our Services</h3>
+              <ul class="footer-links">
+                <li><a href="./Web Development.html"><i class="fas fa-chevron-right"></i> Web
+                    Development</a></li>
+                <li><a href="./Mobile Development.html"><i class="fas fa-chevron-right"></i> Mobile
+                    Development</a></li>
+                <li><a href="./WebSecurity.html"><i class="fas fa-chevron-right"></i> Web Security</a>
+                </li>
+                <li><a href="./DigitalMarketing.html"><i class="fas fa-chevron-right"></i> Digital
+                    Marketing and Solution</a></li>
+                <li><a href="./chatbot.html"><i class="fas fa-chevron-right"></i> ChatBot
+                    Development</a></li>
+                <li><a href="./GameDevelopment.html"><i class="fas fa-chevron-right"></i> Game
+                    Development</a></li>
+                <li><a href="./ui-ux.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                <li><a href="./ai-ml.html"><i class="fas fa-chevron-right"></i> AI/ML</a></li>
+                <li><a href="./Business.html"><i class="fas fa-chevron-right"></i> Business
+                    Consultant</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+              <h3 class="footer-title">Contact Us</h3>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    F No. S11, Dharampeth Tower P No. 209, WHC Road, Nagpur 440010
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    <a href="tel:+919667552361">+91 9667552361</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-text">
+                    <a href="mailto:info@bharatdigital.co">info@bharatdigital.co</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="footer-newsletter">
+                <h4>Subscribe to Newsletter</h4>
+                <form class="newsletter-form">
+                  <input type="email" placeholder="Your email address" required>
+                  <button type="submit" class="btn-subscribe">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Locations -->
+          <div class="footer-locations">
+            <h3 class="locations-title">Our Locations</h3>
+            <div class="locations-grid">
+              <div class="location-item">
+                <h4><i class="fas fa-map-marker-alt"></i> Noida Office</h4>
+                <p>Off. No 2505B/1306, Iconic Tower Corenthum, 25th/13th Floor, Sector 62, Noida,
+                  UP-201301
+                </p>
+              </div>
+              <div class="location-item">
+                <h4><i class="fas fa-map-marker-alt"></i> UAE Office</h4>
+                <p>Office 1503 B, 16th Floor, Musalla Towers & Mall, Next to Four Points by
+                  Sheraton Hotel, Dubai, United Arab Emirates.</p>
+              </div>
+              <div class="location-item">
+                <h4><i class="fas fa-map-marker-alt"></i> USA Office</h4>
+                <p>1030 16th Avenue S., 3rd Floor Nashville, TN 37212, USA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="bottom-content">
+            <div class="copyright">
+              &copy; 2025 Bharat Digital Solutions. All Rights Reserved.
+            </div>
+            <div class="legal-links">
+              <a href="#" class="privacy-policy-link">Privacy Policy</a>
+              <a href="#" class="terms-service-link">Terms of Service</a>
+              <a href="#" class="cookie-policy-link">Cookie Policy</a>
+              <a href="#">Sitemap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Container -->
+      <div class="modal-overlay" id="policyModal">
+        <div class="modal-container">
+          <button class="modal-close-btn">&times;</button>
+          <div class="modal-header">
+            <h2 id="modalTitle">Privacy Policy</h2>
+          </div>
+          <div class="modal-content" id="modalContent">
+            <!-- Content will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-ea1918b9-b849-44d1-bc99-027d5bd1f48a" data-elfsight-app-lazy></div>
+
+    <script src="contact.js"></script>
+</body>
+
+</html>
