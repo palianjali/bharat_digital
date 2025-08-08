@@ -9,6 +9,8 @@ ScrollSmoother.create({
 });
 
 // Counter Animation
+
+// Updated Counter Animation with Custom Suffixes
 const counters = document.querySelectorAll('.counter');
 let animated = false;
 
@@ -18,19 +20,26 @@ ScrollTrigger.create({
   onEnter: () => {
     if (!animated) {
       counters.forEach(counter => {
-        const updateCount = () => {
-          const target = +counter.getAttribute('data-target');
-          const current = +counter.innerText;
-          const increment = target / 100;
-
-          if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(updateCount, 20);
+        const target = +counter.getAttribute('data-target');
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const duration = 2000; // Animation duration in ms
+        const startTime = performance.now();
+        
+        const updateCount = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const currentValue = Math.floor(progress * target);
+          
+          counter.textContent = currentValue + suffix;
+          
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
           } else {
-            counter.innerText = target;
+            counter.textContent = target + suffix;
           }
         };
-        updateCount();
+        
+        requestAnimationFrame(updateCount);
       });
       animated = true;
     }

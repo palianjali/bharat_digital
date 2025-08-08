@@ -254,7 +254,6 @@ body {
   }
 }
 
-
 /* Contact Section */
 .contact-section {
   padding: 80px 40px;
@@ -321,15 +320,76 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* Update the .icon class to ensure consistent styling */
 .icon {
   width: 45px;
   height: 45px;
+  min-width: 45px; /* Add this to prevent shrinking */
+  min-height: 45px; /* Add this to prevent shrinking */
   background-color: var(--secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
+  flex-shrink: 0; /* Prevent the icon from shrinking on small screens */
+}
+
+.icon i {
+  color: white;
+  font-size: 1rem;
+}
+
+/* Ensure info-block maintains proper spacing on mobile */
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+/* Responsive adjustments for contact info blocks */
+@media (max-width: 768px) {
+  .info-block {
+    flex-direction: row; /* Keep horizontal layout on mobile */
+    align-items: center;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+  }
+
+  .info-block p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-block {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .icon i {
+    font-size: 0.9rem;
+  }
 }
 
 .icon i {
@@ -611,6 +671,7 @@ body {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
+  margin-right: 43px;
 }
 
 .social-links {
