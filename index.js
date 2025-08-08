@@ -41,6 +41,39 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      
+      // Remove active class from all links
+      link.classList.remove('active');
+      
+      // Add active class to current page link
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+      
+      // Special case for index.html (home page)
+      if (currentPage === '' && linkPage === 'index.html') {
+        link.classList.add('active');
+      }
+    });
+    
+    // Handle click events to set active state
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  });
+
+  
+
 // Modal functionality
 const modalOverlay = document.getElementById('policyModal');
 const modalTitle = document.getElementById('modalTitle');

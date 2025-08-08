@@ -26,37 +26,40 @@ document.querySelectorAll(".contact-info, .contact-form").forEach((el) => {
 window.addEventListener("scroll", animateOnScroll);
 animateOnScroll();
 
-// EmailJS form submission
-const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
 
-  emailjs
-    .send("service_mcul85v", "template_yadcf2n", {
-      user_name: name,
-      user_email: email,
-      user_phone: phone,
-      message: message,
-    })
-    .then(
-      () => {
-        alert("✅ Thank you! Your message has been sent.");
-        contactForm.reset();
-      },
-      (error) => {
-        console.error("❌ EmailJS Error:", error);
-        alert("⚠ Oops! Something went wrong. Please check your EmailJS setup.");
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href').split('/').pop();
+      
+      // Remove active class from all links
+      link.classList.remove('active');
+      
+      // Add active class to current page link
+      if (linkPage === currentPage) {
+        link.classList.add('active');
       }
-    );
-});
+      
+      // Special case for index.html (home page)
+      if (currentPage === '' && linkPage === 'index.html') {
+        link.classList.add('active');
+      }
+    });
+    
+    // Handle click events to set active state
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  });
 
-
+  
 // Modal functionality
 const modalOverlay = document.getElementById('policyModal');
 const modalTitle = document.getElementById('modalTitle');

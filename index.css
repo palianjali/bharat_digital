@@ -518,13 +518,12 @@ main::before {
   position: absolute;
   right: 100px;
   right: 50px;
-  top: 63%;
+  top: 50%;
   transform: translateY(-50%);
   width: 200px;
   height: 200px;
   perspective: 1000px;
   z-index: 3;
-  margin-top: -150px;
 }
 
 .tech-cube {
@@ -1071,6 +1070,15 @@ main::before {
   }
 }
 
+.nav-links a.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.nav-links li:not(:has(.btn)) a.active::after {
+  width: 100%;
+  background-color: var(--primary-blue);
+}
 
 /* Services Section - Collage Style */
 .services {

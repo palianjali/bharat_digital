@@ -254,6 +254,16 @@ body {
   }
 }
 
+.nav-links a.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.nav-links li:not(:has(.btn)) a.active::after {
+  width: 100%;
+  background-color: var(--primary-blue);
+}
+
 /* Contact Section */
 .contact-section {
   padding: 80px 40px;

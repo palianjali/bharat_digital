@@ -60,6 +60,15 @@ body {
   border-radius: 50px;
   margin: 0 auto;
 }
+.nav-links a.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.nav-links li:not(:has(.btn)) a.active::after {
+  width: 100%;
+  background-color: var(--primary-blue);
+}
 
 .navbar.scrolled {
   box-shadow: var(--shadow-md);
@@ -573,6 +582,7 @@ body {
 }
 
 /* Footer Hero Section */
+/* Footer Hero Section */
 .footer-hero-section {
   text-align: center;
   position: relative;
@@ -705,7 +715,7 @@ body {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
-  margin-right: 43PX;
+  margin-right: 43px;
 }
 
 .social-links {
@@ -1055,6 +1065,8 @@ body {
   margin-bottom: 15px;
   padding-left: 20px;
 }
+
+
 /* Leadership Section */
 .leadership-section {
   padding: 80px 20px;

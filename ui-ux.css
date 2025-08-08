@@ -48,6 +48,7 @@ html,body {
   line-height: 1.6;
   overflow-x: hidden;
   width: 100%;
+
 }
 
 /* Navbar Styles */
@@ -940,12 +941,8 @@ p {
    text-align: center;
   position: relative;
   min-height: 100vh;
-  background-color: #11112B;
-  background-image: url("Line\ 7.png");
-}
-
-.footer-hero-content {
-  padding-top: 100px;
+  background-color: #0B0B21;
+  /* background-image: url("./images/Line.webp"); */
 }
 
 .footer-hero-content h1 {
@@ -967,9 +964,10 @@ p {
 
 /* Footer Styles */
 .footer {
-  background-color: #11112B;
+  background-color: #0B0B21;
   color: #ffffff;
   position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-main {
@@ -1005,17 +1003,14 @@ p {
   margin-right: 10px;
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-}
+ 
 
 .footer-description {
-  margin-bottom: 25px;
-  line-height: 1.7;
-  opacity: 0.8;
-  text-align: left;
+ margin-bottom: 25px;
+    line-height: 1.7;
+    opacity: 0.8;
+    text-align: left;
+    color: white;
 }
 
 .footer-title {
@@ -1068,6 +1063,7 @@ p {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
+  margin-right: 43px
 }
 
 .social-links {
@@ -1280,7 +1276,7 @@ p {
   left: 100%;
 }
 
-/* Responsive Styles */
+/* Footer Responsive Styles */
 @media (max-width: 992px) {
   .footer-grid {
     gap: 30px;
@@ -1294,22 +1290,6 @@ p {
   
   .locations-grid {
     grid-template-columns: 1fr;
-  }
-
-  .contact-section {
-    padding: 60px 20px;
-  }
-
-  .contact-container {
-    gap: 30px;
-  }
-
-  .contact-info h2 {
-    font-size: 2rem;
-  }
-
-  .contact-form {
-    padding: 30px 20px;
   }
 }
 
@@ -1325,15 +1305,8 @@ p {
   .footer-title {
     margin-bottom: 20px;
   }
-
-  .contact-form {
-    padding: 25px 15px;
-  }
-
-  .footer-hero-content h1 {
-    font-size: 36px;
-  }
 }
+
 
 
 
