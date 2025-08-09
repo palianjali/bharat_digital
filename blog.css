@@ -142,6 +142,7 @@ body {
 .nav-links li:not(:has(.btn)) a:hover::after,
 .nav-links li:not(:has(.btn)) a.active::after {
   width: 100%;
+    background-color: var(--primary-blue);
 }
 
 .btn {

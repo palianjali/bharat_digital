@@ -5,13 +5,13 @@ ScrollSmoother.create({
   wrapper: "#smooth-wrapper",
   content: "#smooth-content",
   smooth: 1.2,
-  effects: true
+  effects: true,
 });
 
 // Counter Animation
 
 // Updated Counter Animation with Custom Suffixes
-const counters = document.querySelectorAll('.counter');
+const counters = document.querySelectorAll(".counter");
 let animated = false;
 
 ScrollTrigger.create({
@@ -19,38 +19,38 @@ ScrollTrigger.create({
   start: "top 70%",
   onEnter: () => {
     if (!animated) {
-      counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const suffix = counter.getAttribute('data-suffix') || '';
+      counters.forEach((counter) => {
+        const target = +counter.getAttribute("data-target");
+        const suffix = counter.getAttribute("data-suffix") || "";
         const duration = 2000; // Animation duration in ms
         const startTime = performance.now();
-        
+
         const updateCount = (currentTime) => {
           const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
           const currentValue = Math.floor(progress * target);
-          
+
           counter.textContent = currentValue + suffix;
-          
+
           if (progress < 1) {
             requestAnimationFrame(updateCount);
           } else {
             counter.textContent = target + suffix;
           }
         };
-        
+
         requestAnimationFrame(updateCount);
       });
       animated = true;
     }
-  }
+  },
 });
 
 // Modal functionality
-const modalOverlay = document.getElementById('policyModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalContent = document.getElementById('modalContent');
-const closeModalBtn = document.querySelector('.modal-close-btn');
+const modalOverlay = document.getElementById("policyModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalContent = document.getElementById("modalContent");
+const closeModalBtn = document.querySelector(".modal-close-btn");
 
 // Policy content
 const policies = {
@@ -92,7 +92,7 @@ const policies = {
         • You can manage them via browser settings. </br>
       </p> 
 
-    `
+    `,
   },
   terms: {
     title: "Terms of Service",
@@ -117,7 +117,7 @@ const policies = {
 
       <h3>6. Governing Law</h3>
       <p>These terms are governed by the laws of [India/Maharashtra].</p>
-    `
+    `,
   },
   cookie: {
     title: "Cookie Policy",
@@ -137,53 +137,53 @@ const policies = {
       <p>You can control or delete cookies through your browser settings. </br>
        However, this may affect website functionality.
        </p>
-    `
-  }
+    `,
+  },
 };
 
 // Set up event listeners for policy links
-document.querySelectorAll('.legal-links a').forEach(link => {
-  link.addEventListener('click', (e) => {
+document.querySelectorAll(".legal-links a").forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
     let policyType;
-    
-    if (link.textContent.toLowerCase().includes('privacy')) {
-      policyType = 'privacy';
-    } else if (link.textContent.toLowerCase().includes('terms')) {
-      policyType = 'terms';
-    } else if (link.textContent.toLowerCase().includes('cookie')) {
-      policyType = 'cookie';
+
+    if (link.textContent.toLowerCase().includes("privacy")) {
+      policyType = "privacy";
+    } else if (link.textContent.toLowerCase().includes("terms")) {
+      policyType = "terms";
+    } else if (link.textContent.toLowerCase().includes("cookie")) {
+      policyType = "cookie";
     } else {
       return; // Skip if it's not a policy link
     }
-    
+
     modalTitle.textContent = policies[policyType].title;
     modalContent.innerHTML = policies[policyType].content;
-    
-    modalOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+
+    modalOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 });
 
 // Close modal
-closeModalBtn.addEventListener('click', () => {
-  modalOverlay.classList.remove('active');
-  document.body.style.overflow = 'auto';
+closeModalBtn.addEventListener("click", () => {
+  modalOverlay.classList.remove("active");
+  document.body.style.overflow = "auto";
 });
 
 // Close modal when clicking outside content
-modalOverlay.addEventListener('click', (e) => {
+modalOverlay.addEventListener("click", (e) => {
   if (e.target === modalOverlay) {
-    modalOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto';
+    modalOverlay.classList.remove("active");
+    document.body.style.overflow = "auto";
   }
 });
 
 // Close modal with Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-    modalOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto';
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
+    modalOverlay.classList.remove("active");
+    document.body.style.overflow = "auto";
   }
 });
 
@@ -230,33 +230,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    navLinks.forEach(link => {
-      const linkPage = link.getAttribute('href').split('/').pop();
-      
-      // Remove active class from all links
-      link.classList.remove('active');
-      
-      // Add active class to current page link
-      if (linkPage === currentPage) {
-        link.classList.add('active');
-      }
-      
-      // Special case for index.html (home page)
-      if (currentPage === '' && linkPage === 'index.html') {
-        link.classList.add('active');
-      }
-    });
-    
-    // Handle click events to set active state
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
+  navLinks.forEach((link) => {
+    const linkPage = link.getAttribute("href").split("/").pop();
+
+    // Remove active class from all links
+    link.classList.remove("active");
+
+    // Add active class to current page link
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+
+    // Special case for index.html (home page)
+    if (currentPage === "" && linkPage === "index.html") {
+      link.classList.add("active");
+    }
+  });
+
+  // Handle click events to set active state
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      navLinks.forEach((l) => l.classList.remove("active"));
+      this.classList.add("active");
     });
   });
+});

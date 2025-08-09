@@ -265,7 +265,7 @@ body {
   overflow: hidden;
   background-color: var(--darker);
   color: #ffffff;
-  background-image: url("./Websitebg.png");
+  /* background-image: url("./Websitebg.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top -75px;
