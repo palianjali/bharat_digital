@@ -981,6 +981,9 @@ body {
   .contact-form {
     padding: 25px 15px;
   }
+  .footer-hero-content h1{
+    font-size: 36px;
+  }
 }
 
 /* Modal Styles */
