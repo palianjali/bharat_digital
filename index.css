@@ -1624,18 +1624,18 @@ main::before {
   background-color: #11112b;
 }
 
-.footer-hero-content h1 {
+.footer-hero-content h3 {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
   color: #ffffff;
 }
 
-.footer-hero-content h1 span {
+.footer-hero-content h3 span {
   font-weight: 200;
 }
 
-.footer-hero-content h1 em {
+.footer-hero-content h3 em {
   font-weight: 500;
   font-style: italic;
   color: #ffffffcc;
@@ -1837,18 +1837,18 @@ main::before {
   background-image: url("");
 }
 
-.footer-hero-content h1 {
+.footer-hero-content h3 {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.3;
   color: #ffffff;
 }
 
-.footer-hero-content h1 span {
+.footer-hero-content h3 span {
   font-weight: 200;
 }
 
-.footer-hero-content h1 em {
+.footer-hero-content h3 em {
   font-weight: 500;
   font-style: italic;
   color: #ffffffcc;
@@ -1954,7 +1954,7 @@ main::before {
 .footer-social h4 {
   margin-bottom: 15px;
   font-size: 1.1rem;
-  margin-right: 43px
+  margin-right: 57px
 }
 
 .social-links {
@@ -2452,7 +2452,7 @@ main::before {
     display: none;
   }
   
-  .footer-hero-content h1 {
+  .footer-hero-content h3 {
     font-size: 2.5rem;
   }
 }
