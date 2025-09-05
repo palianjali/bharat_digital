@@ -1309,6 +1309,9 @@ h3 {
   .footer-title {
     margin-bottom: 20px;
   }
+  .footer-hero-content h1 {
+    font-size: 36px;
+  }
 }
 
 

@@ -825,6 +825,9 @@ main::before {
   .section-header h2 {
     font-size: 1.8rem;
   }
+    .footer-hero-content h1 {
+    font-size: 36px;
+  }
 }
 
 /*======================Sec Section ==============================*/
