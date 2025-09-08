@@ -746,7 +746,12 @@ h1 {
   text-align: center;
   position: relative;
   min-height: 100vh;
-  background-color: #11112B;
+  background-color: #11112b;
+  background-image: url("Line\ 7.png");
+}
+
+.footer-hero-content {
+  padding-top: 100px;
 }
 
 .footer-hero-content h1 {
@@ -802,7 +807,7 @@ h1 {
   }
   
   .footer-hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 36px;
   }
 }
 

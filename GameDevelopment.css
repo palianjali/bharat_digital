@@ -659,10 +659,12 @@
   text-align: center;
   position: relative;
   min-height: 100vh;
-  background-color: #11112B;
+  background-color: #11112b;
   background-image: url("Line\ 7.png");
-  padding-top: 70px;  
-  margin-top: 25px;
+}
+
+.footer-hero-content {
+  padding-top: 100px;
 }
 
 .footer-hero-content h1 {
@@ -681,6 +683,7 @@
   font-style: italic;
   color: #ffffffcc;
 }
+
 
 /* Footer Styles */
 .footer {
@@ -1026,6 +1029,9 @@
   
   .footer-title {
     margin-bottom: 20px;
+  }
+  .footer-content h1{
+    font-size: 36px;
   }
 }
 
